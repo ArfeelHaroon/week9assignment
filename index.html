@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Online Order</title>
+</head>
+<body>
+    <main>
+        <h1>Philly Tacos</h1>
+        <img src="images/phillytacos.png" alt="Philly Tacos" width="100">
+        <p>Welcome to our online ordering system. Please select your items and complete your order below.</p>
+        <p>Mexican food, including tacos, burritos, and quesadillas</p>
+        <p>Location: S. 25th Street & Washington Avenue, South Philadelphia</p>
+        <p>Phone: (215) 555-1234</p>    
+        <p>Hours: Monday - Saturday, 11:00 AM - 9:00 PM</p>
+        <p>Closed on Sundays</p>
+
+        <h2>Online Order Form</h2>
+        <form id="order_form" name="order">
+            <fieldset>
+                <legend>Personal Information</legend>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" name="phone" required>
+            </fieldset>
+
+            <fieldset>
+                <legend>Menu Items</legend>
+                <input type="checkbox" id="taco" name="taco" value="taco"> Taco <p>With onions, cilantro, lime and salsa $13.00</p>
+                <input type="checkbox" id="burrito" name="burrito" value="burrito"> Burrito <p>With rice, beans, meat, and salsa $14.00</p>
+                <input type="checkbox" id="quesadilla" name="quesadilla" value="quesadilla"> Quesadilla <p>With cheese, meat, and peppers $12.00</p>
+                <input type="checkbox" id="elotes" name="elotes" value="elotes"> Elotes <p>Grilled corn with mayo, cheese, and chili powder $5.00</p>
+                <input type="checkbox" id="birria" name="birria" value="birria"> Birria <p>Spicy meat stew with tortillas $15.00</p>
+            </fieldset>
+
+            <fieldset>
+  <legend>Customize Your Order</legend>
+
+  <p>Choose a size:</p>
+  <label>
+    <input type="radio" name="size" value="regular" required>
+    Regular
+  </label>
+  <label>
+    <input type="radio" name="size" value="large">
+    Large
+  </label>
+
+  <p>Choose any toppings or extras:</p>
+  <label>
+    <input type="checkbox" name="extras[]" value="onions">
+    Onions
+  </label>
+  <label>
+    <input type="checkbox" name="extras[]" value="cilantro">
+    Cilantro
+  </label>
+  <label>
+    <input type="checkbox" name="extras[]" value="lime">
+    Lime
+  </label>
+  <label>
+    <input type="checkbox" name="extras[]" value="cheese">
+    Extra cheese
+  </label>
+  <label>
+    <input type="checkbox" name="extras[]" value="salsa">
+    Salsa
+  </label>
+
+  <p>
+    <label for="meat">Choose your meat:</label>
+    <select id="meat" name="meat" required>
+      <option value="">Select an option</option>
+      <option value="beef">Beef</option>
+      <option value="chicken">Chicken</option>
+      <option value="pork">Pork</option>
+      <option value="birria">Birria</option>
+    </select>
+  </p>
+
+  <p>
+    <label for="instructions">Special instructions:</label><br>
+    <textarea
+      id="instructions"
+      name="instructions"
+      rows="4"
+      cols="40"
+      placeholder="Add any special requests here."
+    ></textarea>
+  </p>
+</fieldset>
+
+<fieldset>
+  <legend>D. Pickup Information</legend>
+
+  <p>
+    <label for="pickup-date">Preferred pickup date:</label>
+    <input type="date" id="pickup-date" name="pickup-date" required>
+  </p>
+
+  <p>
+    <label for="pickup-time">Preferred pickup time:</label>
+    <input type="time" id="pickup-time" name="pickup-time" required>
+  </p>
+
+  <p>
+    <label for="pickup-location">Pickup location:</label>
+    <label>
+      <input type="radio" name="pickup-location" value="S. 25th Street" required>
+      S. 25th Street
+    </label>
+    <label>
+      <input type="radio" name="pickup-location" value="Washington Avenue, South Philadelphia" required>
+      Washington Avenue, South Philadelphia
+    </label>
+  </p>
+  <p>
+    <label for="pickup-name">Pickup name (if different from customer name):</label>
+    <input
+      type="text"
+      id="pickup-name"
+      name="pickup-name"
+      placeholder="Enter the name for pickup"
+    >
+  </p>
+
+
+
+  <p>
+    <label for="pickup-instructions">Additional pickup instructions:</label><br>
+    <textarea
+      id="pickup-instructions"
+      name="pickup-instructions"
+      rows="3"
+      cols="40"
+      placeholder="Add any pickup instructions here."
+    ></textarea>
+  </p>
+</fieldset>
+
+   <fieldset>
+    <legend>Buttons</legend>
+    <button type="submit">Submit Order</button>
+    <button type="reset">Clear Form</button>
+   </fieldset>
+        </form>
+    </main>
+</body>
+</html>
