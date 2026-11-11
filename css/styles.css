@@ -80,6 +80,12 @@ button:hover, button:focus{
     color: #1757bc;
 }
 
+footer{
+    background-color: rgba(255, 255, 255, 0.63);
+    padding: 20px;
+    text-align: center;
+}
+
 @media (max-width: 768px) {
     form{
         width: 100%;
